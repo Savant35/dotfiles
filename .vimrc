@@ -48,6 +48,7 @@ set vb t_vb =
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[3 q"
 let &t_EI = "\e[1 q"
+autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
 
 
 "add tab completion
@@ -136,6 +137,19 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+"coc-extensions to be install all  at once
+let g:coc_global_extensions = [
+    \ "coc-pairs",
+    \ "coc-html",
+    \ "coc-css",
+    \ "coc-json",
+    \ "coc-emmet",
+    \ "coc-pyright",
+    \ "coc-clangd",
+    \ "coc-java",
+    \ "coc-tsserver"
+    \ ]
 
 "lightline setting
 set laststatus=2

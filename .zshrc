@@ -5,6 +5,8 @@ autoload -U colors && colors
 
 #unset bell
 unsetopt BEEP
+#disable ls highlighting directory
+LS_COLORS=$LS_COLORS:'ow=1;34:'; export LS_COLORS
 
 #set up beutiful prompts
 newline=$'\n'
@@ -81,3 +83,7 @@ fi
 # Load aliases and shortcuts if existent.
 [ -f "$ZDOTDIR/shortcut" ] && source "$ZDOTDIR/shortcut"
 [ -f "$ZDOTDIR/aliases" ] && source "$ZDOTDIR/aliases"
+
+#add fzf keybindings
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
