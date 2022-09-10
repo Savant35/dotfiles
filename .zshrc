@@ -85,5 +85,8 @@ fi
 [ -f "$ZDOTDIR/aliases" ] && source "$ZDOTDIR/aliases"
 
 #add fzf keybindings
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+#source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval $(/opt/homebrew/bin/brew shellenv)
