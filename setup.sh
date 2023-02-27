@@ -9,7 +9,7 @@ if [ ! -d ".config" ]; then
   mv ~/aliases ./zsh;
   cd zsh && mkdir plugins && cd plugins && git clone https://github.com/zsh-users/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting;
 else 
-  cd .config && (mkdir zsh || cd zsh) && mv ~/bashtest/.zshrc ./zsh;
+  cd .config && (mkdir zsh || cd zsh) && mv ~/.zshrc ./zsh;
   mv ~/aliases ./zsh;
   cd zsh && (mkdir plugins || cd plugins) && git clone https://github.com/zsh-users/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting;
 fi
